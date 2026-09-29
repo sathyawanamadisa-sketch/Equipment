@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS officers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    service_number VARCHAR(50) NOT NULL UNIQUE,
+    rank VARCHAR(20) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    section_division VARCHAR(100) NOT NULL,
+    seniority_order INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
